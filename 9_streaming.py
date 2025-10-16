@@ -3,7 +3,7 @@ import ollama
 from sys import stdout
 
 stream = ollama.chat(
-    model='gemma3:4b',
+    model='gemma3:1b',
     messages=[{"role": "user", "content": "생성형 AI의 장단점을 항목별로 정리해줘."}],
     stream=True,  # 스트리밍
     options={"temperature": 0.3}

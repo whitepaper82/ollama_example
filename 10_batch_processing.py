@@ -24,7 +24,7 @@ paragraphs = [
 
 rows = []
 for i, p in enumerate(paragraphs, start=1):
-    out = ask('gemma3:4b', f"두 문장으로 요약하고 핵심 키워드 3개를 해시태그로: {p}", temperature=0.2)
+    out = ask('gemma3:1b', f"두 문장으로 요약하고 핵심 키워드 3개를 해시태그로: {p}", temperature=0.2)
     rows.append({"id": i, "summary": out})
 
 df = pd.DataFrame(rows)

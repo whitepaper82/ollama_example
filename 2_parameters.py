@@ -8,7 +8,7 @@ options = {
 }
 
 resp = ollama.chat(
-    model='gemma3:4b',
+    model='gemma3:1b',
     messages=[{"role": "user", "content": "한 문단짜리 한국어 격언을 창의적으로 지어줘."}],
     options=options
 )

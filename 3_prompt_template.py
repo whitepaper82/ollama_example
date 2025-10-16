@@ -13,5 +13,5 @@ def ask(model, task, system="한국어로 간결하고 정확하게 답해줘.",
     )['message']['content']
 
 
-print(ask('gemma3:4b', "Cafe24를 한 문장으로 설명해줘."))
+print(ask('gemma3:1b', "대한민국을을 한 문장으로 설명해줘."))
 

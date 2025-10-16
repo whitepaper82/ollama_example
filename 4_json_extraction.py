@@ -24,7 +24,7 @@ prompt = f"""
 """
 
 resp = ollama.chat(
-    model='gemma3:4b',
+    model='gemma3:1b',
     messages=[{"role": "user", "content": prompt}],
     format='json',  # JSON 모드
     options={"temperature": 0}

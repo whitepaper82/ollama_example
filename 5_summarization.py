@@ -25,5 +25,5 @@ prompt = f"""
 {article}
 """
 
-print(ask('gemma3:4b', prompt, temperature=0.3))
+print(ask('gemma3:1b', prompt, temperature=0.3))
 

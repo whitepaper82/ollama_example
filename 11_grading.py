@@ -14,7 +14,7 @@ def ask(model, task, system="한국어로 간결하고 정확하게 답해줘.",
     )['message']['content']
 
 
-student_answer = ask('gemma3:4b', "RAG의 정의를 한 문장으로 설명해줘.", temperature=0)
+student_answer = ask('gemma3:1b', "RAG의 정의를 한 문장으로 설명해줘.", temperature=0)
 
 rubric = """
 채점 기준:
@@ -26,7 +26,7 @@ rubric = """
 """ + student_answer
 
 grade = ollama.chat(
-    model='gemma3:4b',
+    model='gemma3:1b',
     messages=[{"role": "user", "content": rubric}],
     format='json',
     options={"temperature": 0}

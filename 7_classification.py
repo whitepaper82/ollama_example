@@ -17,7 +17,7 @@ JSON만 출력:
 리뷰: "{r}"
 """
     out = ollama.chat(
-        model='gemma3:4b',
+        model='gemma3:1b',
         messages=[{"role": "user", "content": prompt}],
         format='json',
         options={"temperature": 0}

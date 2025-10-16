@@ -54,7 +54,7 @@ temp_configs = [
 ]
 
 compare_responses(
-    'gemma3:4b',
+    'gemma3:1b',
     "혁신적인 스마트폰 앱 아이디어를 하나 제안해줘.",
     temp_configs,
     "Temperature 비교 - 창의성 테스트"
@@ -76,7 +76,7 @@ top_p_configs = [
 ]
 
 compare_responses(
-    'gemma3:4b',
+    'gemma3:1b',
     "AI의 미래에 대해 짧게 설명해줘.",
     top_p_configs,
     "Top-P 비교"
@@ -98,7 +98,7 @@ top_k_configs = [
 ]
 
 compare_responses(
-    'gemma3:4b',
+    'gemma3:1b',
     "클라우드 컴퓨팅의 장점 3가지를 나열해줘.",
     top_k_configs,
     "Top-K 비교"
@@ -120,7 +120,7 @@ repeat_configs = [
 ]
 
 compare_responses(
-    'gemma3:4b',
+    'gemma3:1b',
     "Python의 장점을 설명해줘. 특히 'Python'이라는 단어를 여러 번 사용해서.",
     repeat_configs,
     "Repeat Penalty 비교"
@@ -141,7 +141,7 @@ num_predict_configs = [
 ]
 
 compare_responses(
-    'gemma3:4b',
+    'gemma3:1b',
     "머신러닝과 딥러닝의 차이를 자세히 설명해줘.",
     num_predict_configs,
     "Num Predict 비교"
@@ -197,7 +197,7 @@ complex_configs = [
 ]
 
 compare_responses(
-    'gemma3:4b',
+    'gemma3:1b',
     "전자상거래 플랫폼을 개선할 수 있는 방법을 제안해줘.",
     complex_configs,
     "복합 설정 비교 - 목적별 최적화"
@@ -223,7 +223,7 @@ long_text = """
 """
 
 compare_responses(
-    'gemma3:4b',
+    'gemma3:1b',
     f"다음 텍스트를 한 문장으로 요약해줘:\n\n{long_text}",
     ctx_configs,
     "Num CTX 비교"

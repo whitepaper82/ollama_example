@@ -23,7 +23,7 @@ zero_shot = """
 "배송이 너무 늦어서 실망했어요."
 """
 print("\n[Zero-shot 결과]")
-print(ask('gemma3:4b', zero_shot, temperature=0))
+print(ask('gemma3:1b', zero_shot, temperature=0))
 
 # Few-shot (예시 제공)
 few_shot = """
@@ -50,7 +50,7 @@ few_shot = """
 강도:
 """
 print("\n[Few-shot 결과]")
-print(ask('gemma3:4b', few_shot, temperature=0))
+print(ask('gemma3:1b', few_shot, temperature=0))
 
 
 print("\n" + "=" * 60)
@@ -70,7 +70,7 @@ normalization_prompt = """
 입력: 0312345678
 출력:
 """
-print(ask('gemma3:4b', normalization_prompt, temperature=0))
+print(ask('gemma3:1b', normalization_prompt, temperature=0))
 
 
 print("\n" + "=" * 60)
@@ -88,7 +88,7 @@ isValidEmail() → is_valid_email()
 이제 다음을 변환해줘:
 getOrderItemList()
 """
-print(ask('gemma3:4b', code_style_prompt, temperature=0))
+print(ask('gemma3:1b', code_style_prompt, temperature=0))
 
 
 print("\n" + "=" * 60)
@@ -122,7 +122,7 @@ entity_extraction = """
 텍스트: "박민수 대리는 2024년 5월 20일 대전 사무실에서 교육을 실시했다."
 """
 result = ollama.chat(
-    model='gemma3:4b',
+    model='gemma3:1b',
     messages=[{"role": "user", "content": entity_extraction}],
     format='json',
     options={"temperature": 0}
@@ -151,7 +151,7 @@ messages = [
 ]
 
 response = ollama.chat(
-    model='gemma3:4b',
+    model='gemma3:1b',
     messages=messages,
     options={"temperature": 0.3}
 )
@@ -176,7 +176,7 @@ cot_prompt = """
 문제: 책 5권에 45,000원이면 책 12권은 얼마인가?
 풀이:
 """
-print(ask('gemma3:4b', cot_prompt, temperature=0))
+print(ask('gemma3:1b', cot_prompt, temperature=0))
 
 
 print("\n" + "=" * 60)
@@ -197,7 +197,7 @@ category_prompt = """
 "등산화" →
 "무선 충전기" →
 """
-print(ask('gemma3:4b', category_prompt, temperature=0))
+print(ask('gemma3:1b', category_prompt, temperature=0))
 
 
 print("\n" + "=" * 60)
@@ -223,7 +223,7 @@ test_inputs = ["완전 만족합니다!", "돈 아까워요", "보통입니다"]
 
 for test in test_inputs:
     prompt = create_few_shot_prompt(examples, test)
-    result = ask('gemma3:4b', prompt, temperature=0)
+    result = ask('gemma3:1b', prompt, temperature=0)
     print(f'"{test}" → {result}')
 
 
